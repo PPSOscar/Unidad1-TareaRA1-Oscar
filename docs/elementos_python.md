@@ -6,8 +6,8 @@ En este apartado incluyo **dos enlaces** correspondientes a dos cuadernos de [Ju
 
 # 1. Código comentado
 
-- [lavadero.py](docs/JupiterNotebook/lavadero.ipynb)
-- [main_app.pu](docs/JupiterNotebook/mainapp.ipynb)
+- <a href="docs/JupiterNotebook/lavadero.ipynb" download>
+- <a href="docs/JupiterNotebook/mainapp.ipynb" download>
 
 ---
 
