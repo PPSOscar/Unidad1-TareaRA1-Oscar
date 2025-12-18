@@ -10,13 +10,13 @@ En este apartado muestro, en primer lugar, la corrección del código y, despué
 
 En primer lugar, desde la propiar herramienta de depuración crearé un archivo .json para la automatización. En mi caso, le he creado dentro del propio proyecto y muestro la herramienta preparada para depurar los archuvos.
 
-![Creación archivo .json para la automatización](img/Ejecucion_Depuracion/ejecucion_depuracion_json.png)
+![Creación archivo .json para la automatización](img/Ejecucion_depuracion/ejecucion_depuracion_json.png)
 
 - Error 1. Iniciar un lavado estando ocupado --> El tipo de excepción que se produce no es correcto, debe lanzarse _ValueError_ y no _RuntimeError_.
 
 Mediante la ejecución de dos llamadas consecutivas al método hacerLavado sin finalizar el primer ciclo, y usando un breakpoint en la validación de estado, compruebo que el sistema detecta que el lavadero está ocupado y lanza una excepción.
 
-![Error1](img/Ejecucion_Depuracion(error1.png)
+![Error1](img/Ejecucion_depuracion(error1.png)
 
 Solución:
 
@@ -48,13 +48,12 @@ except Exception as e:
 
 - Error 2. Precio incorrecto del secado a mano --> Según el enunciado, el total deberían de ser 6€ y no 6,20€.
 
-![Error2](img/Ejecucion_Depuracion(error2.png)
+![Error2](img/Ejecucion_depuracion(error2.png)
 
 Solución:
 
-```      if self.__secado_a_mano:
-            coste_lavado += 1.00 
-```
+```      if self.__secado_a_mano: 
+	 coste_lavado += 1.00 ```
 
 Ejemplo añadido al main para ejecutar la depuración y probar el error:
 
@@ -73,12 +72,11 @@ lavadero_error3.hacerLavado(prelavado_a_mano=False,
 lavadero_error3.avanzarFase()
 
 print(f"Ingresos tras el cobro: {lavadero_error3.ingresos:.2f} €")
-
 ```
 
 - Error 3: Fase incorrecta tras rodillos (condición invertida) --> Sin secado a mano debería de pasar a secado automático (fase 6).
 
-![Error3](img/Ejecucion_Depuracion(error3.png)
+![Error3](img/Ejecucion_depuracion(error3.png)
 
 Solución:
 
@@ -89,10 +87,8 @@ Solución:
 
             else:
                 self.__fase = self.FASE_SECADO_AUTOMATICO
-
 ```
  
-
 Ejemplo añadido al main para ejecutar la depuración y probar el error:
 
 
@@ -113,12 +109,11 @@ while lavadero_error4.ocupado:
     lavadero_error4.avanzarFase()
 
 print(f"Fase final: {lavadero_error4.fase}")
-
 ```
 
 - Error 4. La fase de encerado (fase 8) nunca se ejecuta --> La fase 8 nunca se ejecuta, incumpliendo el enunciado.
 
-![Error4](img/Ejecucion_Depuracion(error4.png)
+![Error4](img/Ejecucion_depuracion(error4.png)
 
 Solución:
 
@@ -131,7 +126,6 @@ elif self.__fase == self.FASE_SECADO_MANO:
 
 elif self.__fase == self.FASE_ENCERADO:
     self.terminar()
-
 ```
 
 Ejemplo añadido al main para ejecutar la depuración y probar el error:
@@ -153,7 +147,6 @@ while lavadero_error5.ocupado:
     lavadero_error5.avanzarFase()
 
 print(f"Fase final: {lavadero_error5.fase}")
-
 ```
 
 ---
