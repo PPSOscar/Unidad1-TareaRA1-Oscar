@@ -695,7 +695,8 @@ if __name__ == '__main__':
 ```
 - main_app.py:
 
-```# main_app.py
+```
+# main_app.py
 
 # Importar la clase desde el otro archivo (módulo)
 from lavadero import Lavadero
@@ -876,4 +877,3 @@ lavadero_error6.ejecutar_y_obtener_fases(prelavado=False,
                                          encerado=False)
 """
 ```
-
