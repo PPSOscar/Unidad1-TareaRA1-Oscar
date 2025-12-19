@@ -4,4 +4,4 @@ En este apartado adjunto el código fuente del programa. Estos archivos pueden c
 
 ---
 
-- ![Código lavadero](src)
+- ![Código lavadero](src.zip)
