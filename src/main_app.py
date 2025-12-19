@@ -1,7 +1,11 @@
+    # 1. Importamos la clase Lavadero desde el módulo lavadero
+
 # main_app.py
 
 # Importar la clase desde el otro archivo (módulo)
 from lavadero import Lavadero
+
+    # 2. Simulación de lavado con diferentes opciones
 
 # MODIFICACIÓN CLAVE AQUÍ: La función ahora acepta 3 argumentos
 def ejecutarSimulacion(lavadero, prelavado, secado_mano, encerado):
@@ -58,7 +62,7 @@ def ejecutarSimulacion(lavadero, prelavado, secado_mano, encerado):
 if __name__ == "__main__":
     
     lavadero_global = Lavadero() # Usamos una única instancia para acumular ingresos
-    
+""""
     # EJEMPLO 1: Lavado completo con prelavado, secado a mano, con encerado (Requisito 8 y 14)
     # Precio esperado: 5.00 + 1.50 + 1.00 + 1.20 = 8.70 €
     print("\n=======================================================")
@@ -81,3 +85,100 @@ if __name__ == "__main__":
     print("\n=======================================================")
     print("EJEMPLO 4: Prelavado (S), Secado a mano (N), Encerado (N)")
     ejecutarSimulacion(lavadero_global, prelavado=True, secado_mano=False)
+
+    print("\n=======================================================")
+print("EJEMPLO ERROR 2: Intentar iniciar un lavado estando ocupado")
+"""
+
+
+# EJEMPLO ERROR 2: Intentar iniciar un lavado estando ocupado (Requisito 3)
+"""
+lavadero_error = Lavadero()
+
+try:
+    # Primer lavado (arranca correctamente)
+    lavadero_error.hacerLavado(prelavado_a_mano=False,
+                               secado_a_mano=False,
+                               encerado=False)
+
+    print("Primer lavado iniciado correctamente")
+
+    # Segundo lavado SIN terminar el primero
+    lavadero_error.hacerLavado(prelavado_a_mano=True,
+                               secado_a_mano=False,
+                               encerado=False)
+
+except Exception as e:
+    print(f"EXCEPCIÓN CAPTURADA: {type(e).__name__} -> {e}") # Esperado: RuntimeError
+"""
+
+# EJEMPLO ERROR 3: Precio incorrecto del secado a mano (Requisito 7)
+"""
+print("\n=======================================================")
+print("EJEMPLO ERROR 3: Precio incorrecto del secado a mano")
+
+lavadero_error3 = Lavadero()
+
+# Lavado SOLO con secado a mano
+lavadero_error3.hacerLavado(prelavado_a_mano=False,
+                            secado_a_mano=True,
+                            encerado=False)
+
+# Avanzamos SOLO UNA FASE para que se cobre
+lavadero_error3.avanzarFase()
+
+print(f"Ingresos tras el cobro: {lavadero_error3.ingresos:.2f} €")
+"""
+
+# EJEMPLO ERROR 4: Fase incorrecta tras rodillos (sin secado a mano) (Requisito 13)
+"""
+print("\n=======================================================")
+print("EJEMPLO ERROR 4: Fase incorrecta tras rodillos (sin secado a mano)")
+
+lavadero_error4 = Lavadero()
+
+# Lavado SIN secado a mano
+lavadero_error4.hacerLavado(prelavado_a_mano=False,
+                            secado_a_mano=False,
+                            encerado=False)
+
+# Avanzamos fases manualmente
+while lavadero_error4.ocupado:
+    print(f"Fase actual: {lavadero_error4.fase}")
+    lavadero_error4.avanzarFase()
+
+print(f"Fase final: {lavadero_error4.fase}")
+"""
+
+# EJEMPLO ERROR 5: Fase incorrecta tras rodillos (con secado a mano y encerado) (Requisito 13)
+""""
+print("\n=======================================================")
+print("EJEMPLO ERROR 5: La fase de encerado nunca se ejecuta")
+
+lavadero_error5 = Lavadero()
+
+# Lavado con secado a mano y encerado
+lavadero_error5.hacerLavado(prelavado_a_mano=False,
+                            secado_a_mano=True,
+                            encerado=True)
+
+# Avanzamos fases y mostramos todas
+while lavadero_error5.ocupado:
+    print(f"Fase actual: {lavadero_error5.fase}")
+    lavadero_error5.avanzarFase()
+
+print(f"Fase final: {lavadero_error5.fase}")
+"""
+
+"""
+# EJEMPLO ERROR 6: Uso de atributo inexistente self.lavadero
+print("\n=======================================================")
+print("EJEMPLO ERROR 6: Uso de atributo inexistente self.lavadero")
+
+lavadero_error6 = Lavadero()
+
+# Llamamos al método de prueba
+lavadero_error6.ejecutar_y_obtener_fases(prelavado=False,
+                                         secado=False,
+                                         encerado=False)
+"""
