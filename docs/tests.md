@@ -4,4 +4,4 @@ En este apartado adjunto la carpeta _tests_, que contiene el archivo con el cód
 
 ---
 
-- <a href="tests" download> Descargar tests </a>
+- <a href="tests/test_lavadero_unittest.py" download> Descargar tests </a>

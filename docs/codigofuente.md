@@ -4,4 +4,5 @@ En este apartado adjunto el código fuente del programa. Estos archivos pueden c
 
 ---
 
-- <a href="src" download> Descargar código fuente </a>
+- <a href="src/lavadero.py" download> Descargar código lavadero.py </a>
+- <a href="src/main_app.py" download> Descargar código main_app.py </a>
