@@ -4,4 +4,4 @@ En este apartado adjunto la carpeta _tests_, que contiene el archivo con el cód
 
 ---
 
-- ![tests](tests.zip)
+- [tests](tests.zip)
