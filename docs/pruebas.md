@@ -20,8 +20,10 @@ Errores: Este test no muestra errores.
 
 Errores: El test intenta llamar a _hacer_lavado, pero este método no existe en la clase Lavadero.
 
-```AttributeError: 'Lavadero' object has no attribute '_hacer_lavado'
-Did you mean: 'hacerLavado'?```
+```
+AttributeError: 'Lavadero' object has no attribute '_hacer_lavado'
+Did you mean: 'hacerLavado'?
+```
 
 Solución: Añadir _hacer_lavado a lavadero.py
 
@@ -39,7 +41,8 @@ Ejecución tras solucionar error:
 
 Errores: El enunciado dice ValueError, no RuntimeError.
 
-```if self.__ocupado:
+```
+if self.__ocupado:
     raise RuntimeError("No se puede iniciar un nuevo lavado mientras el lavadero está ocupado")
 ```
 
@@ -67,7 +70,8 @@ Errores: Este test no muestra errores.
 
 Errores: El coste del lavado está a 1.20, por lo que 5.00 + 1.20 = 6.20.
 
-```if self.__secado_a_mano:
+```
+if self.__secado_a_mano:
     coste_lavado += 1.20
 ```
 
@@ -87,7 +91,8 @@ Ejecución tras soluiconar el error:
 
 Errores: El coste del encerado tiene que ser 1.20€, no 1.00€
 
-```if self.__encerado:
+```
+if self.__encerado:
     coste_lavado += 1.20
 ```
 
@@ -123,7 +128,8 @@ Errores: Este test no muestra errores.
 
 Errores: El método avanzarFase continuaba evaluando estados tras finalizar el lavado. No se retorna.
 
-```       elif self.__fase == self.FASE_RODILLOS:
+```
+       elif self.__fase == self.FASE_RODILLOS:
             if self.__secado_a_mano:
                 self.__fase = self.FASE_SECADO_MANO
             else:
@@ -174,7 +180,8 @@ Errores: Este test no muestra errores.
 
 Errores: La fase 8 (encerado) está siendo saltada.
 
-```elif self.__fase == self.FASE_SECADO_MANO:
+```
+elif self.__fase == self.FASE_SECADO_MANO:
     self.terminar()
     return
 ```
@@ -211,7 +218,8 @@ Muestro el código completo corregido como resultado de este apartado:
 
 - lavadero.py
 
-```# lavadero.py
+```
+# lavadero.py
 
 class Lavadero:
     """
@@ -413,7 +421,8 @@ class Lavadero:
 
 - test_lavadero_unittest.py:
 
-```# tests/test_lavadero_unittest.py
+```
+# tests/test_lavadero_unittest.py
 
 import unittest
 # Importamos la clase Lavadero desde el módulo padre
@@ -867,3 +876,4 @@ lavadero_error6.ejecutar_y_obtener_fases(prelavado=False,
                                          encerado=False)
 """
 ```
+

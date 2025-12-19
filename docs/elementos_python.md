@@ -1,8 +1,8 @@
 #Elementos de Python
 
-En este apartado explico las funciones de los dos archivos que construyen el programa e incluyo dos enlaces correspondientes a dos cuadernos de [Jupyter Notebook](https://jupyter.org/) en los que incluyo el código comentado de la aplicación _Lavadero_ y de la capa de ejecución _mainapp_.
+En este apartado explico las funciones de los dos archivos que construyen el programa e incluyo dos enlaces correspondientes a dos cuadernos de [Jupyter Notebook](https://jupyter.org/) en los que muestro el código comentado de la aplicación _Lavadero_ y de la capa de ejecución _mainapp_.
 
-**¡IMPORTANTE!** En este apartado, el código está comentado, con el objetivo de ir entendiendo las diferentes fases del programa y cómo funciona, sin errores en el código corregidos. Los errores están corregidos en [Ejecución y Depuración](docs/ejeucion_depuracion.md).
+**¡IMPORTANTE!** En este apartado, el código está comentado, con el objetivo de ir entendiendo las diferentes fases del programa y cómo funciona, sin errores en el código corregidos. Los errores están corregidos en [Ejecución y Depuración](ejeucion_depuracion.md).
 
 ---
 
@@ -13,7 +13,7 @@ En este apartado explico las funciones de los dos archivos que construyen el pro
 - lavadero.py:  Este archivo sirve para controlar los estados y fases del lavadero, calcular precios, llevar los ingresos... No se ejecuta solo, ni imprime ejemplos ni decide el flujo principal, solo responde cuando se le llama.
 
 
-## 2. Código comentado
+## 2. Código comentado - Jupyter Notebook
 
 - <a href="JupiterNotebook/lavadero.ipynb" download> Descargar notebook lavadero.ipynb </a>
 

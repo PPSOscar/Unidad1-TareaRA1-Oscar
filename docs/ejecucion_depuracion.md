@@ -1,6 +1,6 @@
 # Ejecución y Depuración
 
-En este apartado muestro, en primer lugar, la corrección del código y, después, la ejecución y depuración del código. Muestro en cada apartado las correcciones realizadas.
+En este apartado muestro, en primer lugar, la corrección del código y, a continuación, la ejecución y depuración del código. Pueden verse en cada apartado las correcciones realizadas.
 
 ---
 
@@ -48,12 +48,13 @@ except Exception as e:
 
 - Error 2. Precio incorrecto del secado a mano: Según el enunciado, el total deberían de ser 6€ y no 6,20€.
 
-![Error2](img/Ejecucion_depuracion(error2.png)
+![Error2](img/Ejecucion_depuracion/error2.png)
 
 Solución:
 
 ```      if self.__secado_a_mano: 
-	 coste_lavado += 1.00 ```
+	 coste_lavado += 1.00 
+```
 
 Ejemplo añadido al main para ejecutar la depuración y probar el error:
 
@@ -76,7 +77,7 @@ print(f"Ingresos tras el cobro: {lavadero_error3.ingresos:.2f} €")
 
 - Error 3: Fase incorrecta tras rodillos (condición invertida): Sin secado a mano debería de pasar a secado automático (fase 6).
 
-![Error3](img/Ejecucion_depuracion(error3.png)
+![Error3](img/Ejecucion_depuracion/error3.png)
 
 Solución:
 
@@ -113,7 +114,7 @@ print(f"Fase final: {lavadero_error4.fase}")
 
 - Error 4. La fase de encerado (fase 8) nunca se ejecuta: La fase 8 nunca se ejecuta, incumpliendo el enunciado.
 
-![Error4](img/Ejecucion_depuracion(error4.png)
+![Error4](img/Ejecucion_depuracion/error4.png)
 
 Solución:
 
