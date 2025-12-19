@@ -1,4 +1,4 @@
-# Ejecucióm en Sandbox
+# Ejecución en Sandbox
 
 En este apartado voy a utilizar la herramienta de sandboxing [Firejail](https://github.com/netblue30/firejail). Me va a permitir ejecutar el programa _Lavadero_ de forma aislada a mi sistema, limitando lo que puede ver y hacer.
 
