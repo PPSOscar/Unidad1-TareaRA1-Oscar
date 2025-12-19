@@ -20,11 +20,11 @@ En segundo lugar, desde la herramienta lanzo el terminal con el perfil seguro co
 
 En Emulador - Clic derecho - Editar propiedades... Copio la orden del lanzador de la terminal y se la paso a la herramienta para crear un perfil seguro que se va a ejecutar en esa terminal.
 
-[Lanzador](img/Sandbox/2.png)
+![Lanzador](img/Sandbox/2.png)
 
 Una vez le doy a _Done_, se lanza el terminal en el que estaría el perfil seguro. Podemos ver el PID y la ruta del perfil.
 
-[Perfil](img/Sandbox/3.png)
+![Perfil](img/Sandbox/3.png)
 
 ---
 
@@ -32,9 +32,9 @@ Una vez le doy a _Done_, se lanza el terminal en el que estaría el perfil segur
 
 Con _python3_ ejectuto la aplicación en el sandbox.
 
-[Ejecución](img/Sandbox/3.png)
+![Ejecución](img/Sandbox/3.png)
 
-[Ejecución](img/Sandbox/4.png)
+![Ejecución](img/Sandbox/4.png)
 
 
 

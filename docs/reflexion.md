@@ -1,5 +1,7 @@
 #Reflexión sobre comparación de la infraestructura de seguridad de los lenguajes 
 
+---
+
 Tras haber visto los contenidos de esta unidad, me he dado cuenta de que la seguridad en la programación es algo mucho más amplio de lo que pensaba en un principio. Creía que bastaba con usar un lenguaje “seguro”, estandarizado y digamos, "popular". Pero ahora entiendo que la seguridad depende de muchos factores como el lenguaje, el entorno donde se ejecuta el programa y las medidas de protección adicionales que se utilicen.
 
 Me ha parecido interesante comparar lenguajes como _Python_ y _Java_. Creo que _Python_ es muy cómodo para programar y evita muchos errores comunes, como los relacionados con la memoria, lo que lo hace bastante seguro. Sin embargo, también he visto que _Python_ no tiene un sistema de seguridad tan estricto integrado, por lo que si alguien consigue ejecutar código malicioso, puede causar bastantes problemas en el sistema.
