@@ -34,6 +34,8 @@ Con _python3_ ejectuto la aplicación en el sandbox.
 
 ![Ejecución](img/Sandbox/3.png)
 
+En la siguiente captura podemos observar uno de los errores que contiene el programa. Se muestra porque para la prueba en sandbox he escogido las versiones de código sin corregir. Se demuestra que todo queda aislado en este entorno.
+
 ![Ejecución](img/Sandbox/4.png)
 
 
