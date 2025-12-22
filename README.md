@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Unidad1-TareaRA1-Oscar
 Tarea obligatoria correspondiente a la Unidad 1
 
@@ -8,7 +7,7 @@ Tarea obligatoria correspondiente a la Unidad 1
 
 Este repositorio corresponde a la **Tarea RA1 de la Unidad 1**, en la que se desarrolla una aplicación en **Python** siguiendo buenas prácticas de programación, pruebas y documentación.
 
-El trabajo abarca todo el ciclo básico de desarrollo del software:  
+El trabajo abarca todo el ciclo básico de desarrollo del software:
 Implementación del código, documentación detallada, ejecución y depuración en un IDE, pruebas unitarias, ejecución en un entorno controlado (*sandbox*) y una reflexión final sobre la infraestructura de seguridad de los lenguajes de programación.
 
 Toda la documentación generada ha sido publicada mediante **GitHub Pages**.
@@ -39,7 +38,7 @@ Los objetivos principales de esta tarea son:
 - Diseñar e implementar pruebas unitarias para validar el funcionamiento
 - Ejecutar la aplicación en un entorno controlado (*sandbox*)
 - Analizar y reflexionar sobre la infraestructura de seguridad de los lenguajes
-  
+
 ---
 
 ## 4. Alcance del proyecto
@@ -56,7 +55,7 @@ No se trata de una aplicación comercial, sino de un **proyecto académico** con
 
 ---
 
-## 📁 Estructura del repositorio
+## 5. Estructura del repositorio
 
 El repositorio se organiza de la siguiente manera:
 
@@ -74,4 +73,3 @@ El repositorio se organiza de la siguiente manera:
 │   ├── ...
 │
 ├── README.md                 # Documento principal del repositorio
-======
