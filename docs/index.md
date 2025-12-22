@@ -2,6 +2,8 @@
 
 Índice con las diferentes secciones de los contenidos de la documentación:
 
+---
+
 1. [Elementos de Python](elementos_python.md)
 2. [Ejecución y Depuración](ejecucion_depuracion.md)
 3. [Pruebas](pruebas.md)
