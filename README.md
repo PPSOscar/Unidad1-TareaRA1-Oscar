@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Unidad1-TareaRA1-Oscar
 Tarea obligatoria correspondiente a la Unidad 1
 
@@ -73,3 +74,4 @@ El repositorio se organiza de la siguiente manera:
 │   ├── ...
 │
 ├── README.md                 # Documento principal del repositorio
+======
