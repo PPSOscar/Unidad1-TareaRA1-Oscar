@@ -3,12 +3,12 @@ theme:
   name: mkdocs
 
 nav:
-  - Inicio: index.md
-  - 1. Elementos de Python: elementos_python.md
-  - 2. Ejecución y Depuración: ejecucion_depuracion.md
-  - 3. Pruebas: pruebas.md
-  - 4. Ejecución en Sandbox: sandbox.md
-  - 5. Reflexión: reflexion.md
-  - 6. Código fuente: codigofuente.md
-  - 7. Tests: tests.md
+  - 1. Índice: index.md
+  - 2. Elementos de Python: elementos_python.md
+  - 3. Ejecución y Depuración: ejecucion_depuracion.md
+  - 4. Pruebas: pruebas.md
+  - 5. Ejecución en Sandbox: sandbox.md
+  - 6. Reflexión: reflexion.md
+  - 7. Código fuente: codigofuente.md
+  - 8. Tests: tests.md
 

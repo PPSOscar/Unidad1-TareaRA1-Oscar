@@ -52,7 +52,8 @@ except Exception as e:
 
 Solución:
 
-```      if self.__secado_a_mano: 
+```
+ if self.__secado_a_mano: 
 	 coste_lavado += 1.00 
 ```
 
@@ -64,12 +65,12 @@ print("EJEMPLO ERROR 3: Precio incorrecto del secado a mano")
 
 lavadero_error3 = Lavadero()
 
-# Lavado SOLO con secado a mano
+ #  Lavado SOLO con secado a mano
 lavadero_error3.hacerLavado(prelavado_a_mano=False,
                             secado_a_mano=True,
                             encerado=False)
 
-# Avanzamos SOLO UNA FASE para que se cobre
+ # Avanzamos SOLO UNA FASE para que se cobre
 lavadero_error3.avanzarFase()
 
 print(f"Ingresos tras el cobro: {lavadero_error3.ingresos:.2f} €")
@@ -99,12 +100,12 @@ print("EJEMPLO ERROR 4: Fase incorrecta tras rodillos (sin secado a mano)")
 
 lavadero_error4 = Lavadero()
 
-# Lavado SIN secado a mano
+ # Lavado SIN secado a mano
 lavadero_error4.hacerLavado(prelavado_a_mano=False,
                             secado_a_mano=False,
                             encerado=False)
 
-# Avanzamos fases manualmente
+ # Avanzamos fases manualmente
 while lavadero_error4.ocupado:
     print(f"Fase actual: {lavadero_error4.fase}")
     lavadero_error4.avanzarFase()
@@ -137,12 +138,12 @@ print("EJEMPLO ERROR 5: La fase de encerado nunca se ejecuta")
 
 lavadero_error5 = Lavadero()
 
-# Lavado con secado a mano y encerado
+ # Lavado con secado a mano y encerado
 lavadero_error5.hacerLavado(prelavado_a_mano=False,
                             secado_a_mano=True,
                             encerado=True)
 
-# Avanzamos fases y mostramos todas
+ # Avanzamos fases y mostramos todas
 while lavadero_error5.ocupado:
     print(f"Fase actual: {lavadero_error5.fase}")
     lavadero_error5.avanzarFase()
@@ -159,12 +160,12 @@ A continuación muestro el código completo del programa con los errores comenta
 - main_app.py
 
 ```
-# main_app.py
+ # main_app.py
 
-# Importar la clase desde el otro archivo (módulo)
+ # Importar la clase desde el otro archivo (módulo)
 from lavadero import Lavadero
 
-# MODIFICACIÓN CLAVE AQUÍ: La función ahora acepta 3 argumentos
+ # MODIFICACIÓN CLAVE AQUÍ: La función ahora acepta 3 argumentos
 def ejecutarSimulacion(lavadero, prelavado, secado_mano, encerado):
     """
     Simula el proceso de lavado para un vehículo con las opciones dadas.
@@ -176,7 +177,7 @@ def ejecutarSimulacion(lavadero, prelavado, secado_mano, encerado):
     :param encerado: bool, True si se solicita encerado.
     """
    
-# Se muestran las opciones solicitadas al inciar el lavado. Se muestran las excepciones
+ # Se muestran las opciones solicitadas al inciar el lavado. Se muestran las excepciones
  
     print("--- INICIO: Prueba de Lavado con Opciones Personalizadas ---")
     
@@ -217,7 +218,7 @@ def ejecutarSimulacion(lavadero, prelavado, secado_mano, encerado):
         print(f"ERROR INESPERADO: {e}")
 
 
-# Punto de entrada (main): Aquí pasamos los parámetros
+ # Punto de entrada (main): Aquí pasamos los parámetros
 if __name__ == "__main__":
     
     lavadero_global = Lavadero() # Usamos una única instancia para acumular ingresos
@@ -250,7 +251,7 @@ print("EJEMPLO ERROR 2: Intentar iniciar un lavado estando ocupado")
 """
 
 
-# EJEMPLO ERROR 2: Intentar iniciar un lavado estando ocupado (Requisito 3)
+ # EJEMPLO ERROR 2: Intentar iniciar un lavado estando ocupado (Requisito 3)
 """
 lavadero_error = Lavadero()
 
@@ -271,37 +272,37 @@ except Exception as e:
     print(f"EXCEPCIÓN CAPTURADA: {type(e).__name__} -> {e}") # Esperado: RuntimeError
 """
 
-# EJEMPLO ERROR 3: Precio incorrecto del secado a mano (Requisito 7)
+ # EJEMPLO ERROR 3: Precio incorrecto del secado a mano (Requisito 7)
 """
 print("\n=======================================================")
 print("EJEMPLO ERROR 3: Precio incorrecto del secado a mano")
 
 lavadero_error3 = Lavadero()
-
-# Lavado SOLO con secado a mano
+ 
+ # Lavado SOLO con secado a mano
 lavadero_error3.hacerLavado(prelavado_a_mano=False,
                             secado_a_mano=True,
                             encerado=False)
 
-# Avanzamos SOLO UNA FASE para que se cobre
+ # Avanzamos SOLO UNA FASE para que se cobre
 lavadero_error3.avanzarFase()
 
 print(f"Ingresos tras el cobro: {lavadero_error3.ingresos:.2f} €")
 """
 
-# EJEMPLO ERROR 4: Fase incorrecta tras rodillos (sin secado a mano) (Requisito 13)
+ # EJEMPLO ERROR 4: Fase incorrecta tras rodillos (sin secado a mano) (Requisito 13)
 """
 print("\n=======================================================")
 print("EJEMPLO ERROR 4: Fase incorrecta tras rodillos (sin secado a mano)")
 
 lavadero_error4 = Lavadero()
 
-# Lavado SIN secado a mano
+ # Lavado SIN secado a mano
 lavadero_error4.hacerLavado(prelavado_a_mano=False,
                             secado_a_mano=False,
                             encerado=False)
 
-# Avanzamos fases manualmente
+ # Avanzamos fases manualmente
 while lavadero_error4.ocupado:
     print(f"Fase actual: {lavadero_error4.fase}")
     lavadero_error4.avanzarFase()
@@ -309,19 +310,19 @@ while lavadero_error4.ocupado:
 print(f"Fase final: {lavadero_error4.fase}")
 """
 
-# EJEMPLO ERROR 5: Fase incorrecta tras rodillos (con secado a mano y encerado) (Requisito 13)
+ # EJEMPLO ERROR 5: Fase incorrecta tras rodillos (con secado a mano y encerado) (Requisito 13)
 """"
 print("\n=======================================================")
 print("EJEMPLO ERROR 5: La fase de encerado nunca se ejecuta")
 
 lavadero_error5 = Lavadero()
 
-# Lavado con secado a mano y encerado
+ # Lavado con secado a mano y encerado
 lavadero_error5.hacerLavado(prelavado_a_mano=False,
                             secado_a_mano=True,
                             encerado=True)
 
-# Avanzamos fases y mostramos todas
+ # Avanzamos fases y mostramos todas
 while lavadero_error5.ocupado:
     print(f"Fase actual: {lavadero_error5.fase}")
     lavadero_error5.avanzarFase()
@@ -330,13 +331,13 @@ print(f"Fase final: {lavadero_error5.fase}")
 """
 
 """
-# EJEMPLO ERROR 6: Uso de atributo inexistente self.lavadero
+ # EJEMPLO ERROR 6: Uso de atributo inexistente self.lavadero
 print("\n=======================================================")
 print("EJEMPLO ERROR 6: Uso de atributo inexistente self.lavadero")
 
 lavadero_error6 = Lavadero()
 
-# Llamamos al método de prueba
+ # Llamamos al método de prueba
 lavadero_error6.ejecutar_y_obtener_fases(prelavado=False,
                                          secado=False,
                                          encerado=False)
@@ -346,7 +347,7 @@ lavadero_error6.ejecutar_y_obtener_fases(prelavado=False,
 - lavadero.py:
 
 ```
-# lavadero.py
+ # lavadero.py
 
 class Lavadero:
     """
@@ -354,8 +355,8 @@ class Lavadero:
     Cumple con los requisitos de estado, avance de fase y reglas de negocio.
     """
 
-# A continuación, las constantes, que serán las diferentes fases del lavadero.
-# El uso de estas constantes mejora la legibilidad y el mantenimiento del código.
+ # A continuación, las constantes, que serán las diferentes fases del lavadero.
+ # El uso de estas constantes mejora la legibilidad y el mantenimiento del código.
 
     FASE_INACTIVO = 0
     FASE_COBRANDO = 1
@@ -367,8 +368,8 @@ class Lavadero:
     FASE_SECADO_MANO = 7
     FASE_ENCERADO = 8
 
-# Tenemos el constructor de la clase. Encargado de inicializar el lavaderio.
-# Podemos ver también los atributos privados del lavadero.
+ # Tenemos el constructor de la clase. Encargado de inicializar el lavaderio.
+ # Podemos ver también los atributos privados del lavadero.
 
     def __init__(self):
         """
@@ -383,7 +384,7 @@ class Lavadero:
         self.__encerado = False
         self.terminar() 
 
-# Propiedades. Nos permiten acceder a los atributos privados de forma controlada.
+ # Propiedades. Nos permiten acceder a los atributos privados de forma controlada.
 
     @property
     def fase(self):
@@ -409,8 +410,8 @@ class Lavadero:
     def encerado(self):
         return self.__encerado
 
-# Métodos principales.
-# Las dos siguientes funciones sirven para controlar el ciclo de lavado.
+ # Métodos principales.
+ # Las dos siguientes funciones sirven para controlar el ciclo de lavado.
 
     def terminar(self):
         self.__fase = self.FASE_INACTIVO
@@ -427,7 +428,7 @@ class Lavadero:
         :raises ValueError: Si se intenta encerar sin secado a mano (Requisito 2).
         """
 
-# Condiciones.
+ # Condiciones.
 
         if self.__ocupado:
             raise ValueError("No se puede iniciar un nuevo lavado mientras el lavadero está ocupado")
@@ -441,7 +442,7 @@ class Lavadero:
         self.__secado_a_mano = secado_a_mano
         self.__encerado = encerado
 
-# Ingresos        
+ # Ingresos        
 
     def _cobrar(self):
         """
@@ -462,8 +463,8 @@ class Lavadero:
         self.__ingresos += coste_lavado
         return coste_lavado
 
-# Avance de las fases.
-# Se implementa la lógica de avance de fases del lavadero.
+ # Avance de las fases.
+ # Se implementa la lógica de avance de fases del lavadero.
 
     def avanzarFase(self):
        
@@ -509,8 +510,8 @@ class Lavadero:
         else:
             raise RuntimeError(f"Estado no válido: Fase {self.__fase}. El lavadero va a estallar...")
 
-# Muestra por pantalla.
-# Se muesteran por pantalla la fase actual y el estado del lavadero.
+ # Muestra por pantalla.
+ # Se muesteran por pantalla la fase actual y el estado del lavadero.
 
     def imprimir_fase(self):
         fases_map = {
@@ -537,7 +538,7 @@ class Lavadero:
         self.imprimir_fase()
         print("\n----------------------------------------")
 
-# Pruebas unitarias
+ # Pruebas unitarias
         
     # Esta función es útil para pruebas unitarias, no es parte del lavadero real
     # nos crea un array con las fases visitadas en un ciclo completo
